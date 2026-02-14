@@ -2,27 +2,27 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# Walk With Me 🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: LYORA
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: Shahanas Ruksana C P - jYOTHI ENGINEERING COLLEGE
+- Member 2: Sahla Nasrin CP
 
 ### Hosted Project Link
-[mention your project hosted link here]
+https://deluxe-conkies-3f9a16.netlify.app/
 
 ### Project Description
-[2-3 lines about what your project does]
+"Walk With Me: Stay safe on every walk. If you don’t check in, your trusted contacts get your live location instantly."
 
 ### The Problem statement
-[What problem are you solving?]
+“Walk With Me monitors your walk and sends automatic alerts to trusted contacts with your live location if you don’t confirm you’re safe.”
 
 ### The Solution
-[How are you solving it?]
+“Walking alone can feel unsafe, stressful, and unpredictable. Our app ‘Walk With Me’ ensures your safety by alerting trusted contacts with your live location if you don’t check in.”
 
 ---
 
@@ -31,25 +31,27 @@
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+- Languages used:  JavaScript, HTML,CSS
+- Frameworks used: none
+- Libraries used: none
+- Tools used: VS Code,Web Browser,Window OS
 
 **For Hardware:**
-- Main components: [List main components]
-- Specifications: [Technical specifications]
-- Tools required: [List tools needed]
+- Main components: none
+- Specifications: none
+- Tools required: none
 
 ---
 
 ## Features
 
 List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+- Feature 1: User Signup – Users can register with basic details and prepare emergency information
+- Feature 2: Add Trusted Contacts – Save phone numbers or emails of family/friends
+- Feature 3: Start Walk Timer – Begin a safety timer while travelling or walking.
+- Feature 4: Safety Check Popup – After a fixed time, the system asks “Are you safe?”.Auto Alert – If no response, emergency contacts are notified.
+Live Location Sharing – Sends current GPS location to trusted people.
+Emergency Button – Quick way to trigger help instantly.
 
 ---
 
@@ -59,21 +61,21 @@ List the key features of your project:
 
 #### Installation
 ```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
+Download or clone the repository to your computer.
 ```
 
 #### Run
 ```bash
-[Run commands - e.g., npm start, python app.py]
+Open index.html in your browser.
 ```
 
 ### For Hardware:
 
 #### Components Required
-[List all components needed with specifications]
+none
 
 #### Circuit Setup
-[Explain how to set up the circuit]
+
 
 ---
 
@@ -83,26 +85,103 @@ List the key features of your project:
 
 #### Screenshots (Add at least 3)
 
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+<img width="1366" height="768" alt="Screenshot (2)" src="https://github.com/user-attachments/assets/ae7fd490-6d94-4698-bef2-cf0f68a87903" />
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+<img width="1366" height="768" alt="Screenshot (3)" src="https://github.com/user-attachments/assets/ebe9cb7a-f34f-455e-9d91-2c15e70f2bce" />
+
+
+<img width="1366" height="768" alt="Screenshot (4)" src="https://github.com/user-attachments/assets/2ef9acc0-0f83-4db1-b9e8-6731c8505725" />
+
 
 #### Diagrams
 
 **System Architecture:**
+The Walk With Me system is a browser-based safety monitoring platform designed to protect users while they travel alone.
 
-![Architecture Diagram](docs/architecture.png)
-*Explain your system architecture - components, data flow, tech stack interaction*
+#### Components
+
+1. **Frontend (Client Side)**
+   - Built using HTML, CSS and Vanilla JavaScript.
+   - Provides UI for signup, adding emergency contacts, starting the walk timer, and responding to safety check popups.
+
+2. **Location Service**
+   - Uses the browser Geolocation API to fetch the user's live GPS coordinates.
+
+3. **Timer Engine**
+   - Runs a background countdown (for example, every 5 minutes).
+   - Triggers the safety confirmation popup.
+
+4. **Alert System**
+   - Activated if the user does not respond.
+   - Collects live location and prepares alert messages.
+
+5. **Communication Module**
+   - Sends SMS and Email notifications to saved emergency contacts.
+
+6. **Data Storage**
+   - Stores basic user profile and contact information (can be local storage or database depending on deployment).
+
+---
+
+#### Data Flow
+
+User → starts walk → timer runs → popup asks “Are you safe?”  
+If YES → timer resets.  
+If NO or no response → GPS location fetched → alert message generated → SMS/Email sent to emergency contacts.
+
+---
+
+#### Tech Stack
+
+- HTML – structure  
+- CSS – styling & responsive design  
+- JavaScript – logic, timer, geolocation  
+- SMS/Email API – alert communication  
+- Browser Local Storage / Backend DB – saving user data
+
+---
+
+#### Interaction Between Components
+
+The frontend triggers the timer.  
+The timer triggers the popup.  
+If ignored, the system calls the geolocation service.  
+The communication module then sends alerts with the retrieved coordinates.
 
 **Application Workflow:**
 
-![Workflow](docs/workflow.png)
-*Add caption explaining your workflow*
+### Application Workflow
+
+The application is designed to work in simple, clear steps so users can activate safety monitoring quickly.
+
+1. User opens the Walk With Me website.
+2. Welcome screen with motivation and “Get Started” button appears.
+3. User signs up and adds emergency contacts.
+4. User presses **Start Walk**.
+5. The safety timer begins running.
+6. After the selected interval, a popup asks:
+   **“Are you safe?”**
+
+---
+
+#### Possible Outcomes
+
+✅ **User presses YES**
+- Timer resets.
+- Monitoring continues.
+
+⚠️ **User presses NO or gives no response**
+- System automatically fetches live GPS location.
+- Emergency alert message is generated.
+- SMS and Email are sent to saved contacts.
+- Contacts can track or call the user.
+
+---
+
+#### Goal of Workflow
+
+To ensure that if a user becomes unable to respond, the system reacts automatically and informs trusted people without delay.
 
 ---
 
